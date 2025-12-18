@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择头像"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Option 1: Gallery -->
+    <LinearLayout
+        android:id="@+id/btnPickFromGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:tint="#2196F3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="从相册选择..."
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:layout_marginStart="16dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="推荐头像"
+        android:textSize="14sp"
+        android:textColor="#888888"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Option 2: Sliding List of Avatars -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <!-- Placeholder Default Avatars -->
+            <!-- You can replace src with your own avatar_01.png etc -->
+            
+            <ImageView
+                android:id="@+id/ivDef1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@android:drawable/sym_def_app_icon"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circle_shape"
+                android:padding="10dp"
+                android:layout_marginEnd="16dp"/>
+
+            <ImageView
+                android:id="@+id/ivDef2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@android:drawable/star_big_on"
+                android:scaleType="center"
+                android:background="@drawable/circle_shape"
+                android:padding="10dp"
+                android:layout_marginEnd="16dp"/>
+
+            <ImageView
+                android:id="@+id/ivDef3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@android:drawable/ic_menu_camera"
+                android:scaleType="center"
+                android:background="@drawable/circle_shape"
+                android:padding="10dp"
+                android:layout_marginEnd="16dp"/>
+
+            <ImageView
+                android:id="@+id/ivDef4"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@android:drawable/ic_menu_myplaces"
+                android:scaleType="center"
+                android:background="@drawable/circle_shape"
+                android:padding="10dp"
+                android:layout_marginEnd="16dp"/>
+                
+            <ImageView
+                android:id="@+id/ivDef5"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@android:drawable/ic_menu_call"
+                android:scaleType="center"
+                android:background="@drawable/circle_shape"
+                android:padding="10dp"
+                android:layout_marginEnd="16dp"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>
